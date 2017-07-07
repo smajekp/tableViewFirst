@@ -1,0 +1,6 @@
+framework module Pods_ListingRepo {
+  umbrella header "Pods-ListingRepo-umbrella.h"
+
+  export *
+  module * { export * }
+}
