@@ -9,7 +9,7 @@
 #import "Repomodel.h"
 
 @implementation Repomodel
-@synthesize repoName,repoLink,repoImage;
+@synthesize repoName,repoLink,repoImage,repoForks;
 
 -(id)initWithDictionary:(NSDictionary *)sourceDictionary
 {

@@ -18,6 +18,7 @@
 		42559D1B1F0F76B9008437C1 /* ListingRepoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42559D1A1F0F76B9008437C1 /* ListingRepoTests.m */; };
 		42559D261F0F76B9008437C1 /* ListingRepoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42559D251F0F76B9008437C1 /* ListingRepoUITests.m */; };
 		425F06EA1F0FBA13003DBA00 /* Repomodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F06E91F0FBA13003DBA00 /* Repomodel.m */; };
+		42C996A31F13639000A2DCF9 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C996A21F13639000A2DCF9 /* DetailsViewController.m */; };
 		637125F668ACFEBD65F0F0CC /* Pods_ListingRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E36FC383C0C7EBE681462C /* Pods_ListingRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		42559D271F0F76B9008437C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425F06E81F0FBA13003DBA00 /* Repomodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repomodel.h; sourceTree = "<group>"; };
 		425F06E91F0FBA13003DBA00 /* Repomodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repomodel.m; sourceTree = "<group>"; };
+		42C996A11F13639000A2DCF9 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		42C996A21F13639000A2DCF9 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		45872D02CE537980FB923E0F /* Pods-ListingRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingRepo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListingRepo/Pods-ListingRepo.release.xcconfig"; sourceTree = "<group>"; };
 		DBF5F8248204ACC6192F99C1 /* Pods-ListingRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListingRepo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListingRepo/Pods-ListingRepo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +142,8 @@
 				42245C061F0F8DE8003EE708 /* RepoTableViewCell.xib */,
 				425F06E81F0FBA13003DBA00 /* Repomodel.h */,
 				425F06E91F0FBA13003DBA00 /* Repomodel.m */,
+				42C996A11F13639000A2DCF9 /* DetailsViewController.h */,
+				42C996A21F13639000A2DCF9 /* DetailsViewController.m */,
 			);
 			path = ListingRepo;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				425F06EA1F0FBA13003DBA00 /* Repomodel.m in Sources */,
 				42559D081F0F76B9008437C1 /* ViewController.m in Sources */,
 				42559D051F0F76B9008437C1 /* AppDelegate.m in Sources */,
+				42C996A31F13639000A2DCF9 /* DetailsViewController.m in Sources */,
 				42559D021F0F76B9008437C1 /* main.m in Sources */,
 				42245C071F0F8DE8003EE708 /* RepoTableViewCell.m in Sources */,
 			);

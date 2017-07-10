@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "RepoTableViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "Repomodel.h"
+#import "DetailsViewController.h"
 
 @interface ViewController ()
 
@@ -32,7 +32,16 @@ NSMutableArray *itemsArray;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if([segue.identifier isEqual: @"detailsSegue"]){
+        if([segue.destinationViewController isKindOfClass:[DetailsViewController class]]){
+            DetailsViewController *detailsController = (DetailsViewController *)segue.destinationViewController;
+
+            if([sender isKindOfClass:[Repomodel class]]){
+                detailsController.repomodel = sender;
+            }
+            
+        }
+    }
 }
 
 -(void)registerCellForTableView{
@@ -53,7 +62,7 @@ NSMutableArray *itemsArray;
     [activityIndicator startAnimating];
     
     [manager GET:@"https://api.github.com/search/repositories?q=language:swift&per_page=10" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         
         activityIndicator.hidden = YES;
          
@@ -103,7 +112,9 @@ NSMutableArray *itemsArray;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier: @"detailsSegue" sender:nil];
+   Repomodel *model = itemsArray[indexPath.row];
+
+    [self performSegueWithIdentifier:@"detailsSegue" sender:model];
 }
 
 - (void)didReceiveMemoryWarning {
