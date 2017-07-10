@@ -59,12 +59,14 @@ NSMutableArray *itemsArray;
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
+    [self.tableView setHidden:YES];
     [activityIndicator startAnimating];
     
     [manager GET:@"https://api.github.com/search/repositories?q=language:swift&per_page=10" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
         
         activityIndicator.hidden = YES;
+        [activityIndicator stopAnimating];
          
          //we will add Modal class objects of users in this array
          
@@ -81,6 +83,7 @@ NSMutableArray *itemsArray;
     
          
          //reload your tableview data
+        [self.tableView setHidden:NO];
          [self.tableView reloadData];
          
          
